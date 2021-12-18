@@ -5,10 +5,8 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [
-        ""
-      ],
-      "stopAtEntry": true,
+      "args": [],
+      "stopAtEntry": false,
       "cwd": "/Users/anton/Unreal/Projects/HelloWorld/src",
       "environment": [],
       "program": "/Users/anton/Unreal/Projects/HelloWorld/src/build/Debug/outDebug",

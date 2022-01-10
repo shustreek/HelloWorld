@@ -18,6 +18,9 @@
   "files.associations": {
     "string": "cpp",
     "vector": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "exception": "cpp",
+    "stdexcept": "cpp",
+    "__config": "cpp"
   }
 }

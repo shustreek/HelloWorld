@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Helpers.h"
 #include <string>
-#include "Vector.cpp"
+#include "Stack.cpp"
 
 using namespace std;
 
@@ -19,9 +19,19 @@ public:
 
 int main()
 {
-    Example example;
-    Vector vector;
-    cout << example.getText() << "\n";
-    vector.Show();
-    cout << "vector length: " << vector.Length() << "\n";
+    int size = 5;
+    Stack stack(size);
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.push(40);
+    stack.push(50);
+    // stack.push(60);
+
+    for (int i = 0; i < size - 1; i++)
+    {
+        cout << stack.pop() << ' ';
+    }
+    cout << "\n" << stack.peek() << ' ';
+    cout << "\n" << stack.pop() << ' ';
 }

@@ -1,37 +1,56 @@
 #include <iostream>
-#include "Helpers.h"
 #include <string>
-#include "Stack.cpp"
 
 using namespace std;
 
-class Example
+class Animal
 {
-private:
-    string text = "something";
+protected:
+    Animal() {}
+    void Print(const string &msg)
+    {
+        cout << msg << "\n";
+    }
 
 public:
-    string getText()
+    virtual void Voice(){};
+};
+
+class Dog : public Animal
+{
+public:
+    void Voice() override
     {
-        return text;
+        Print("Woof");
+    }
+};
+
+class Cat : public Animal
+{
+public:
+    void Voice() override
+    {
+        Print("Meow");
+    }
+};
+
+class Duck : public Animal
+{
+public:
+    void Voice() override
+    {
+        Print("Quack");
     }
 };
 
 int main()
 {
-    int size = 5;
-    Stack stack(size);
-    stack.push(10);
-    stack.push(20);
-    stack.push(30);
-    stack.push(40);
-    stack.push(50);
-    // stack.push(60);
-
-    for (int i = 0; i < size - 1; i++)
+    Animal *array[3] = {
+        new Dog,
+        new Cat,
+        new Duck};
+    for (Animal *animal : array)
     {
-        cout << stack.pop() << ' ';
+        animal->Voice();
     }
-    cout << "\n" << stack.peek() << ' ';
-    cout << "\n" << stack.pop() << ' ';
 }

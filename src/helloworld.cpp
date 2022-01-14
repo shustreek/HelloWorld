@@ -6,14 +6,13 @@ using namespace std;
 class Animal
 {
 protected:
-    Animal() {}
-    void Print(const string &msg)
+    static void Print(const string &msg)
     {
         cout << msg << "\n";
     }
 
 public:
-    virtual void Voice(){};
+    virtual void Voice() = 0;
 };
 
 class Dog : public Animal
